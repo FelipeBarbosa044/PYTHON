@@ -17,12 +17,12 @@ class Gamer:
 
 
     def ficha(self):
-        contador = 0
-        while contador < len(self.favoritos):
-            self.games = f":video_game: [blue]{self.favoritos[contador]}[/]\n"
-            contador += 1
 
-        dados = Panel(f"Nome real: [black on blue]{self.nome}[/]\nJogos favoritos: {self.games}",title=f"Jogador <{self.nick}>")
+        games =  "\n".join(f":video_game: [blue]{game}[/]" for game in self.favoritos) #Usando JOIN
+
+
+
+        dados = Panel(f"Nome real: [black on blue]{self.nome}[/]\nJogos favoritos:\n{games} " ,title=f"Jogador <{self.nick}>")
         print(dados)
 
 j1 = Gamer("Felipe","Nesferaz")
@@ -31,3 +31,8 @@ j1.add_favoritos("The last of us")
 j1.add_favoritos("Uncharted")
 j1.add_favoritos("Minecraft")
 j1.ficha()
+
+j2 = Gamer("Glivia Souza","peach_raivosa")
+j2.add_favoritos("Mario Bros")
+j2.add_favoritos("Call of Duty")
+j2.ficha()
