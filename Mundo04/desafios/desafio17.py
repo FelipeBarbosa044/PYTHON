@@ -32,5 +32,3 @@ p1.etiqueta()
 
 p2 = Produto("Nootbook Gamer", "8,000.00")
 p2.etiqueta()
-
-print(p1)
