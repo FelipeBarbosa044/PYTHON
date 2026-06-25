@@ -29,7 +29,7 @@ class Desenvolvedor(Funcionario):
 
 
     def CalcularSalario(self):
-        if super().cargo() in self.salarios:
+        if self.cargo in self.salarios:
             for v,c in self.salarios.items():
                 if v == self.cargo:
                     return  f'Salario: {c}'
@@ -48,7 +48,7 @@ class Desginer(Funcionario):
 
 
     def CalcularSalario(self):
-        if super().cargo() in self.salarios:
+        if self.cargo in self.salarios:
             for v,c in self.salarios.items():
                 if v == self.cargo:
                     return f'Salario: {c}'
@@ -98,7 +98,7 @@ DIGITE AQUI: """)
                 obj = Desenvolvedor(nome,cargo)
 
             funcionarios.append(obj.status())
-            op = str(input('[@2r.] Digite qualquer coisa para continuar\n[N] Para Ver os funcionarios \nDigite aqui: '.upper()))
+            op = str(input('Digite qualquer coisa para continuar\n[N] Para Ver os funcionarios \nDigite aqui: '.upper()))
             if op == 'N' or op == 'n':
                 print(funcionarios)
                 break

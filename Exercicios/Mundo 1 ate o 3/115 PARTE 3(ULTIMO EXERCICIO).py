@@ -4,7 +4,7 @@ from pacote.matematica import leiaint
 from pacote.arquivo import noarq
 
 try:
-    open('pessoas.txt','r').read()
+    open('pessoas.txt', 'r').read()
 except:
     with open('pessoas.txt', 'x') as arquivo:
         pass
@@ -32,7 +32,7 @@ def dados():
             cor('OPÇÃO 1'.center(70),"ciano")
             print('-' * 70)
             sleep(3)
-            with open('pessoas.txt','r') as arquivo:
+            with open('pessoas.txt', 'r') as arquivo:
                 arq = arquivo.read()
                 if arq == '':
                     cor('Ainda não existe nenhuma pessoa cadastrada!!',"rosa")

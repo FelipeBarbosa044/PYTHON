@@ -93,17 +93,17 @@ def status(personagem):
 
 felipe = Mago('Felipe','fedor')
 joao = Arqueiro('joazin',"agua")
-victor = Cavalheiro('victor','diamante')
+silvio = Cavalheiro('Silvio', 'diamante')
 status(joao)
 status(felipe)
-status(victor)
+status(silvio)
 
 felipe.ataque_especial(joao)
-joao.ataque_especial(victor)
-victor.ataque_especial(felipe)
+joao.ataque_especial(silvio)
+silvio.ataque_especial(felipe)
 
 status(joao)
 status(felipe)
-status(victor)
+status(silvio)
 
 

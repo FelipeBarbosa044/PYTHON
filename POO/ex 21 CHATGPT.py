@@ -28,7 +28,7 @@ class Cavalheiro(Personagem):
 
 
 cav = Cavalheiro('felipe')
-arq = Arqueiro('victor')
+arq = Arqueiro('kratos')
 cav.atacar()
 arq.atacar()
 p = Personagem('p')
